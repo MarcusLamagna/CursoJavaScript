@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vitória | Mata Mosquito</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+	<script type="text/javascript">
+		function iniciarJogo() {
+			var nivel = document.getElementById('nivel').value
+
+			if(nivel === '') {
+				alert('Selecione um nível para iniciar o jogo')
+				return false
+			}
+
+			window.location.href = "app.html?" + nivel
+		}
+	</script>
+</head>
+<body>
+	<div class="container"><!-- Inicio container -->
+		<div class="row"><!-- Inicio row -->
+			<div class="col-md-12"><!-- Inicio coluna -->
+				<div class="d-flex justify-content-center"><!-- Inicio centralizando imagem -->
+					<img src="imagens/game.png" /><!-- Inicio e fim imagem -->
+				</div><!--/fim centralizando imagem -->
+			</div><!--/fim coluna -->
+		</div><!--/fim row -->
+
+		<div class="row"><!-- Inicio row -->
+			<div class="col-md-12"><!-- Inicio coluna -->
+				<div class="d-flex justify-content-center"><!-- Inicio centralizando imagem -->
+					<div class="mb-2"><!-- Inicio margem Button-->
+						<select class="form-control" id="nivel"><!-- Inicio seleção de nível -->
+							<option value="">-- Selecionar o nível --</option>
+							<option value="normal">Normal</option>
+							<option value="dificil">Difícil</option>
+							<option value="chucknorris">Chuck Norris</option>
+						</select><!--/fim seleção de nível -->
+					</div><!--/fim margem Button-->
+				</div><!--/fim centralizando imagem -->
+			</div><!--/fim coluna -->
+		</div><!--/fim row -->
+
+		<div class="row"><!-- Inicio row -->
+			<div class="col-md-12"><!-- Inicio coluna -->
+				<div class="d-flex justify-content-center"><!-- Inicio centralizando imagem -->
+					<button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar Jogo</button><!-- Inicio e fim botão -->
+				</div><!--/fim centralizando imagem -->
+			</div><!--/fim coluna -->
+		</div><!--/fim row -->
+
+	</div><!--/fim container -->
+</body>
+</html>
